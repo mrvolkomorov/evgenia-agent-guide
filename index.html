@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Раздатка №6 — Первый агент: Hermes Desktop и Apify</title>
+<style>
+:root{--ink:#1a2330;--muted:#5b6673;--line:#dfe4ea;--bg:#f7f8fa;--card:#fff;--accent:#1a4d8f;--accent2:#0f7b6c;--warn:#b8860b;--warnbg:#fff8e6;--free:#0f7b6c;--freebg:#e6f5f2}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+header{background:#0b3d6b;background:linear-gradient(135deg,#0b3d6b,#1a4d8f);color:#fff;padding:32px 24px}
+header .wrap{max-width:1080px;margin:0 auto}
+header .badge{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);padding:4px 12px;border-radius:20px;font-size:13px;font-weight:600}
+header h1{font-size:29px;line-height:1.25;margin:14px 0 10px;font-weight:700}
+header p{font-size:16px;opacity:.92;max-width:800px}
+header .meta{font-size:14px;opacity:.8;margin-top:14px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+main{padding:32px 0 56px}
+section{margin-bottom:44px}
+h2{font-size:22px;margin-bottom:8px;font-weight:700}
+h2 + .lead{color:var(--muted);font-size:15px;margin-bottom:18px}
+h3{font-size:17px;margin:24px 0 10px;font-weight:650}
+h4{font-size:15.5px;margin:0 0 6px;color:var(--accent)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px 22px;margin-bottom:16px}
+.alert{border-left:4px solid var(--warn);background:var(--warnbg);border-radius:0 8px 8px 0}
+.alert strong{color:#8a6100}
+.good{border-left:4px solid var(--accent2);background:var(--freebg);border-radius:0 8px 8px 0}
+.good strong{color:#0b5f53}
+.free-badge{display:inline-block;background:var(--freebg);color:var(--free);font-size:11.5px;font-weight:700;padding:3px 9px;border-radius:4px;border:1px solid #bfe3dc;white-space:nowrap}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:14.5px}
+th{background:#eef1f5;text-align:left;padding:12px 14px;font-weight:650;font-size:13px;color:#3d4753;border-bottom:2px solid var(--line)}
+td{padding:12px 14px;border-bottom:1px solid #eceff2;vertical-align:top}
+tr:last-child td{border-bottom:none}
+tr.pick{background:#f4faf8}
+.mname{font-weight:650}
+.mid{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--muted);word-break:break-all}
+.prompt{background:#f4f6f8;border:1px solid #e2e6eb;border-left:3px solid var(--accent);border-radius:0 7px 7px 0;padding:14px 16px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;color:#2b3442;margin:12px 0;white-space:pre-wrap;line-height:1.55}
+.prompt-lbl{font-size:13px;font-weight:650;color:var(--accent);margin:16px 0 4px}
+.steps{counter-reset:st;list-style:none;margin:12px 0}
+.steps li{counter-increment:st;position:relative;padding-left:38px;margin-bottom:14px}
+.steps li:before{content:counter(st);position:absolute;left:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;font-size:13.5px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.check li{list-style:none;position:relative;padding-left:28px;margin-bottom:9px}
+.check li:before{content:"□";position:absolute;left:0;top:-1px;font-size:17px;color:var(--accent2);font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:16px 0}
+.mini{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:16px 18px}
+.mini p{font-size:14px;color:var(--muted)}
+ul,ol{margin:10px 0 10px 22px}
+li{margin-bottom:7px}
+a{color:var(--accent)}
+.tblwrap{overflow-x:auto;border-radius:10px;border:1px solid var(--line);background:var(--card)}
+.tblwrap table{border:none}
+footer{background:#1f2732;color:#9aa5b1;padding:26px 24px;font-size:13.5px}
+footer .wrap{max-width:1080px;margin:0 auto}
+footer a{color:#8fb4e8}
+@media(max-width:640px){header h1{font-size:23px}main{padding:24px 0 40px}th,td{padding:10px 11px;font-size:13.5px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<span class="badge">Раздаточный материал №6</span>
+<h1>Первый агент: Hermes Desktop и Apify</h1>
+<p>Как поставить локальное приложение, собрать первого специализированного бота и подключить к нему сбор данных с маркетплейсов. Без программирования.</p>
+<div class="meta">Занятие 2 · 23 октября 2026 · данные проверены 23 октября 2026</div>
+</div></header>
+
+<main class="wrap">
+
+<section>
+<div class="card good">
+<strong>Главная мысль занятия.</strong> Бот — это не программирование. Это написанное задание. Если вы можете описать словами работу сотрудника, вы можете собрать такого же бота. Разница только в том, что сотрудник читает задание приказом, а бот — системным промптом.
+</div>
+</section>
+
+<section>
+<h2>1. Hermes Desktop — что это</h2>
+<p class="lead">Настольное приложение с открытым исходным кодом. Работает на вашем компьютере, ничего не отправляя на чужой сервер без вашего решения.</p>
+<div class="tblwrap"><table>
+<thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+<tbody>
+<tr class="pick"><td class="mname">Что это</td><td>Нативное приложение с открытым исходным кодом от Nous Research — тот же агент, что и в терминале, но с окном</td></tr>
+<tr class="pick"><td class="mname">Лицензия и цена</td><td>MIT, бесплатно <span class="free-badge">бесплатно</span></td></tr>
+<tr class="pick"><td class="mname">Где взять</td><td><a href="https://hermes-agent.nousresearch.com/desktop" target="_blank">hermes-agent.nousresearch.com</a></td></tr>
+<tr><td class="mname">Платформы</td><td>macOS 12 и выше · Windows 10/11 · любой Linux (на Linux ставится через терминал)</td></tr>
+<tr><td class="mname">Учётная запись</td><td>Для базовой работы не нужна. Вход в Nous Portal добавляет облачных агентов, льготные модели и кредиты на инструменты</td></tr>
+<tr><td class="mname">Память</td><td>Постоянная — помнит ваши проекты и предпочтения между сессиями</td></tr>
+<tr><td class="mname">Навыки</td><td>Агент сам пишет себе навыки по мере работы</td></tr>
+<tr><td class="mname">Расширение</td><td>Плагины добавляют новые инструменты, хуки и интеграции, не трогая основу</td></tr>
+</tbody></table></div>
+</section>
+
+<section>
+<h2>2. Установка</h2>
+<ol class="steps">
+<li><strong>Скачайте</strong> приложение с официальной страницы. Для macOS — файл <span class="mid">Hermes-Setup.dmg</span>, для Windows — <span class="mid">Hermes-Setup.exe</span></li>
+<li><strong>Запустите установку</strong> и дождитесь запуска первого окна</li>
+<li><strong>Первый запуск</strong> задаст несколько вопросов про имя и задачи — это необязательные подсказки для агента, их можно пропустить</li>
+<li><strong>Проверьте</strong>, что окно открылось и в поле ввода можно написать сообщение</li>
+</ol>
+<div class="card alert">
+<strong>Если установка идёт дольше 6 минут.</strong> Не ждите. Запустите приложение вручную и переходите к следующему разделу — разбор установки вернём на Занятии 3.
+</div>
+</section>
+
+<section>
+<h2>3. Интерфейс — что где находится</h2>
+<div class="grid">
+<div class="mini"><h4>Чат</h4><p>Основное окно. Здесь вы ставите задачу и получаете результат</p></div>
+<div class="mini"><h4>Сессии</h4><p>Отдельные разговоры под разные задачи. Не смешивайте в одной сессии разные проекты</p></div>
+<div class="mini"><h4>Память</h4><p>То, что агент запомнил о вас. Проверяйте — если туда попало лишнее, попросите забыть</p></div>
+<div class="mini"><h4>Навыки</h4><p>Инструкции, которые агент написал сам себе. Их можно читать и править</p></div>
+</div>
+<p class="prompt-lbl">Первый тест — напишите агенту:</p>
+<div class="prompt">Ответь одним предложением: кто ты и для чего ты создан?</div>
+<div class="card">
+Если ответ пришёл — приложение работает и готово к настройке. Дальше создаём бота.
+</div>
+</section>
+
+<section>
+<h2>4. Создание бота</h2>
+<p class="lead">Через режим Bot Mode. Бот — это отдельный специализированный агент со своим системным промптом.</p>
+<div class="tblwrap"><table>
+<thead><tr><th>Элемент системного промпта</th><th>Зачем нужен</th><th>Пример для скриптов карточек</th></tr></thead>
+<tbody>
+<tr><td class="mname">Роль</td><td>Кто он, что делает</td><td>Ты — скриптер карточек товаров для маркетплейса</td></tr>
+<tr><td class="mname">Что подаётся на вход</td><td>Какие данные бот получает</td><td>Название, артикул, состав, цвет, размер, фактура, особенности</td></tr>
+<tr><td class="mname">Что выдаёшь</td><td>Формат результата</td><td>Заголовок, лид, описание, акценты, ключевые слова</td></tr>
+<tr><td class="mname">Запреты</td><td>Чего бот не должен делать</td><td>Не выдумывать характеристики, которых нет в паспорте изделия</td></tr>
+</tbody></table></div>
+<p class="prompt-lbl">Готовый системный промпт — скопируйте в бота:</p>
+<div class="prompt">Ты — скриптер карточек товаров для маркетплейсов.
+
+На вход ты получаешь паспорт изделия: название, артикул, состав, цвет,
+размерный ряд, конструкцию, детали и сценарий носки.
+
+Ты готовишь текст карточки в пяти блоках:
+1. Заголовок — до 60 знаков, главное отличие изделия впереди
+2. Лид — одно предложение, зачем это изделие
+3. Описание — 3–5 предложений по фактам из паспорта
+4. Акценты — 3 буллета с особенностями: состав, конструкция, сезонность
+5. Ключевые слова — 8–12 штук, формулировки покупателя
+
+ЖЁСТКИЕ ЗАПРЕТЫ:
+— Не выдумывай характеристики, которых нет в паспорте
+— Не используй слова «лучший», «качественный», «уникальный» без фактов
+— Не пиши о медицинских свойствах, которых нет в составе
+— Если данных не хватает — напиши: «не хватает данных по: [что]»
+
+Стиль: деловой, без восклицательных знаков, как в карточке зарубежного
+бренда. Ориентир — 900–1200 знаков на весь текст.</div>
+<div class="card good">
+<strong>Проверьте бота тестом «молча».</strong> Дайте ему паспорт изделия без объяснений — просто вставьте данные. Если бот задаёт уточняющие вопросы вместо готового текста, в системном промпте не хватает блока «что подаётся на вход».
+</div>
+</section>
+
+<section>
+<h2>5. Apify — сбор данных с маркетплейсов</h2>
+<p class="lead">Облачная площадка с готовыми инструментами сбора данных. Это «руки» вашего агента.</p>
+<div class="tblwrap"><table>
+<thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+<tbody>
+<tr class="pick"><td class="mname">Что это</td><td>Маркетплейс более 95 000 готовых инструментов для сбора данных</td></tr>
+<tr class="pick"><td class="mname">Готовый инструмент называется</td><td>Actor</td></tr>
+<tr class="pick"><td class="mname">Бесплатный тариф</td><td>$5 использования в месяц. <strong>Карта не нужна</strong></td></tr>
+<tr><td class="mname">Стартовый тариф</td><td>$19/мес</td></tr>
+<tr><td class="mname">Где брать</td><td><a href="https://apify.com" target="_blank">apify.com</a></td></tr>
+</tbody></table></div>
+<p class="prompt-lbl">Порядок действий:</p>
+<ol class="steps">
+<li><strong>Зарегистрируйтесь</strong> на apify.com</li>
+<li><strong>Получите токен</strong>: настройки профиля → раздел API или токены</li>
+<li><strong>Откройте каталог</strong> и найдите готовый инструмент под свою задачу — по названию и описанию результата, который он отдаёт</li>
+<li><strong>Подключите токен</strong> к Hermes — бот получает доступ к инструменту</li>
+<li><strong>Запустите на одной карточке</strong>, проверьте, что пришёл структурированный результат, а не пустота</li>
+</ol>
+<div class="card alert">
+<strong>Честно о блокировках.</strong> Часть площадок активно блокирует автоматический сбор, и на них первый запуск может не пройти — это не ошибка вашей настройки. С карточками Wildberries такое уже было: обычный чат-бот не может их прочитать. Поэтому проверяйте связку на площадке, где сбор открыт. Закрытые площадки разбираем отдельно на Занятии 3.
+</div>
+</section>
+
+<section>
+<h2>6. Чек-лист: бот готов к работе</h2>
+<div class="card">
+<ul class="check">
+<li>У бота есть системный промпт с ролью, входом, форматом и запретами</li>
+<li>Бот не задаёт уточняющих вопросов на полных данных</li>
+<li>В выдаче нет выдуманных характеристик</li>
+<li>Формат стабильный — отдаёт одинаковую структуру при разных данных</li>
+<li>Токен Apify получен и подключён</li>
+<li>На тестовой карточке Apify вернул данные</li>
+<li>Вы понимаете, какие данные бот берёт и откуда</li>
+<li>В памяти агента нет лишних рабочих данных бренда</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>7. Что типично ломается</h2>
+<div class="tblwrap"><table>
+<thead><tr><th>Симптом</th><th>Причина</th><th>Что делать</th></tr></thead>
+<tbody>
+<tr><td>Бот задаёт вопросы вместо ответа</td><td>В промпте нет блока «что подаётся на вход»</td><td>Дописать вход и формат выдачи</td></tr>
+<tr><td>Бот выдумывает характеристики</td><td>Не задан запрет</td><td>Добавить жёсткий запрет и проверить на неполном паспорте</td></tr>
+<tr><td>Ответ каждый раз разный по стилю</td><td>В промпте нет примера формата</td><td>Добавить 1–2 примера готового ответа</td></tr>
+<tr><td>Apify вернул пустоту</td><td>Площадка блокирует сбор</td><td>Это не поломка. Проверить на открытой площадке</td></tr>
+<tr><td>Токен не подключается</td><td>Скопирован с пробелами или от истёкшей ссылки</td><td>Создать новый токен в настройках профиля</td></tr>
+<tr><td>Бот «забыл» изделие между сессиями</td><td>Не сохранили паспорт в память агента</td><td>Один раз попросить сохранить паспорт как справочник</td></tr>
+<tr><td>Бот отвечает про чужой бренд</td><td>Память загрязнена данными других проектов</td><td>Проверить память, попросить забыть лишнее</td></tr>
+</tbody></table></div>
+</section>
+
+<section>
+<div class="card alert">
+<strong>О ценах.</strong> Данные проверены 23 октября 2026. Hermes Desktop бесплатен по лицензии MIT. Apify даёт $5 использования в месяц на бесплатном тарифе без карты, дальше $19. Если Apify сообщает, что лимит исчерпан, — это не поломка, а граница бесплатного тарифа.
+</div>
+</section>
+
+</main>
+
+<footer><div class="wrap">
+Раздаточный материал №6 к занятию 2 «Визуал + видео для бренда» · 23 октября 2026<br>
+Источники: <a href="https://hermes-agent.nousresearch.com/desktop" target="_blank">hermes-agent.nousresearch.com</a> · <a href="https://apify.com" target="_blank">apify.com</a> · <a href="https://apify.com/pricing" target="_blank">apify.com/pricing</a>
+</div></footer>
+</body></html>
